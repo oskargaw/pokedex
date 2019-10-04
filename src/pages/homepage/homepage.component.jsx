@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import CardList from "../../components/cardList/cardList.component";
 
-import { requestPokemons } from "../../redux/pokemonList/pokemonList.actions";
+import { requestPokemons } from "../../redux/pokemons/pokemons.actions";
 
 import "./homepage.styles.scss";
 

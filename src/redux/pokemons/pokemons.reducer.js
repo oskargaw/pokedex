@@ -1,4 +1,4 @@
-import PokemonActionTypes from "./pokemonList.types";
+import PokemonsActionTypes from "./pokemons.types";
 
 const INITIAL_STATE = {
   pokemons: [],
@@ -6,20 +6,20 @@ const INITIAL_STATE = {
   error: ""
 };
 
-const pokemonListReducer = (state = INITIAL_STATE, action) => {
+const pokemonsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case PokemonActionTypes.REQUEST_POKEMONS_PENDING:
+    case PokemonsActionTypes.REQUEST_POKEMONS_PENDING:
       return {
         ...state,
         isPending: true
       };
-    case PokemonActionTypes.REQUEST_POKEMONS_SUCCESS:
+    case PokemonsActionTypes.REQUEST_POKEMONS_SUCCESS:
       return {
         ...state,
         pokemons: action.payload,
         isPending: false
       };
-    case PokemonActionTypes.REQUEST_POKEMONS_FAILED:
+    case PokemonsActionTypes.REQUEST_POKEMONS_FAILED:
       return {
         ...state,
         error: action.payload,
@@ -30,4 +30,4 @@ const pokemonListReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default pokemonListReducer;
+export default pokemonsReducer;

@@ -1,7 +1,7 @@
-const PokemonActionTypes = {
+const PokemonsActionTypes = {
   REQUEST_POKEMONS_PENDING: "REQUEST_POKEMONS_PENDING",
   REQUEST_POKEMONS_SUCCESS: "REQUEST_POKEMONS_SUCCESS",
   REQUEST_POKEMONS_FAILED: "REQUEST_POKEMONS_FAILED"
 };
 
-export default PokemonActionTypes;
+export default PokemonsActionTypes;

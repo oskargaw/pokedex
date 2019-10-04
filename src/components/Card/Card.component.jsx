@@ -1,13 +1,24 @@
 import React from "react";
+import { connect } from "react-redux";
 
-import "./card.styles.scss";
 import CustomButton from "../custom-button/custom-button.component";
 
-const Card = ({ name, url }) => (
+import { requestPokemon } from "../../redux/pokemon/pokemon.actions";
+
+import "./card.styles.scss";
+
+const Card = ({ name, url, requestPokemon }) => (
   <div className="card">
     <div className="card__title">{name}</div>
-    <CustomButton>See more</CustomButton>
+    <CustomButton onClick={() => requestPokemon(url)}>See more</CustomButton>
   </div>
 );
 
-export default Card;
+const mapDispatchToProps = dispatch => ({
+  requestPokemon: url => dispatch(requestPokemon(url))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Card);
