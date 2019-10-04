@@ -1,0 +1,67 @@
+// COLOR VARIABLES
+$color-grey-light: #f4f2f2;
+
+$color-grey-dark: #777;
+
+$color-white: #fff;
+$color-black: #000000;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  width: 100%;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 40%;
+  }
+}
+
+body {
+  color: $color-grey-dark;
+  font-weight: 300;
+  line-height: 1.6;
+  outline: none;
+  width: 100%;
+  background: linear-gradient(89deg, #ff5edf 0%, #04c8de 100%);
+}
+
+.container {
+  padding: 7rem 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    [full-start]
+    minmax(6rem, 1fr)
+    [center-start]
+    repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end]
+    minmax(6rem, 1fr)
+    [full-end];
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
