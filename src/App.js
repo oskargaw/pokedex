@@ -3,6 +3,7 @@ import React from "react";
 import Particles from "react-particles-js";
 
 import "./App.scss";
+import Homepage from "./pages/homepage.component";
 
 const particlesOptions = {
   particles: {
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="container">
       <Particles className="particles" params={particlesOptions} />
+      <Homepage />
     </div>
   );
 }
