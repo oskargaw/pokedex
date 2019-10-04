@@ -1,9 +1,11 @@
 import React from "react";
-
+import { Switch, Route } from "react-router-dom";
 import Particles from "react-particles-js";
 
-import "./App.scss";
 import Homepage from "./pages/homepage/homepage.component";
+import PokemonPage from "./pages/pokemon/pokemon.component";
+
+import "./App.scss";
 
 const particlesOptions = {
   particles: {
@@ -21,7 +23,10 @@ function App() {
   return (
     <div className="container">
       <Particles className="particles" params={particlesOptions} />
-      <Homepage />
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route path="/:pokemon" component={PokemonPage} />
+      </Switch>
     </div>
   );
 }
