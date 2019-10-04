@@ -1,7 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { requestPokemons } from "../redux/pokemonList/pokemonList.actions";
+import CardList from "../../components/cardList/cardList.component";
+
+import { requestPokemons } from "../../redux/pokemonList/pokemonList.actions";
 
 import "./homepage.styles.scss";
 
@@ -13,7 +15,13 @@ class Homepage extends React.Component {
   }
 
   render() {
-    return <div>HELLO WORLD</div>;
+    const { pokemons } = this.props;
+
+    return (
+      <div className="homepage">
+        <CardList pokemons={pokemons} />
+      </div>
+    );
   }
 }
 

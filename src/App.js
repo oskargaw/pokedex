@@ -3,7 +3,7 @@ import React from "react";
 import Particles from "react-particles-js";
 
 import "./App.scss";
-import Homepage from "./pages/homepage.component";
+import Homepage from "./pages/homepage/homepage.component";
 
 const particlesOptions = {
   particles: {

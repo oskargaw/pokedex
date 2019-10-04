@@ -1,13 +1,27 @@
+$color-black: #000000;
+$color-white: #ffffff;
+
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: all 0.3s;
-  width: 40%;
+  height: 30rem;
+  background-color: rgba($color-black, 0.65);
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba($color-black, 0.25),
+    -5px -5px 30px 7px rgba($color-black, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba($color-black, 0.2);
   }
 
-  &__image {
-    width: 100%;
+  &__title {
+    font-size: 3rem;
+    color: $color-white;
   }
 
   &__text {
