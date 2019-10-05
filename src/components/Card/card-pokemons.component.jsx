@@ -8,13 +8,13 @@ import { requestPokemon } from "../../redux/pokemon/pokemon.actions";
 
 import "./card.styles.scss";
 
-const Card = ({ name, url, requestPokemon, history, match, linkUrl }) => (
+const CardPokemons = ({ name, url, history, dispatch }) => (
   <div className="card">
     <div className="card__title">{name}</div>
     <CustomButton
       onClick={() => {
         history.push(`/${name}`);
-        requestPokemon(url);
+        dispatch(requestPokemon(url));
       }}
     >
       See more
@@ -22,13 +22,4 @@ const Card = ({ name, url, requestPokemon, history, match, linkUrl }) => (
   </div>
 );
 
-const mapDispatchToProps = dispatch => ({
-  requestPokemon: url => dispatch(requestPokemon(url))
-});
-
-export default withRouter(
-  connect(
-    null,
-    mapDispatchToProps
-  )(Card)
-);
+export default withRouter(connect(null)(CardPokemons));

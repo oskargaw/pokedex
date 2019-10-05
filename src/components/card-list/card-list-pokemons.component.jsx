@@ -1,10 +1,10 @@
 import React from "react";
 
-import Card from "../card/card.component";
+import CardPokemons from "../card/card-pokemons.component";
 
 import "./cardList.styles.scss";
 
-const CardList = ({
+const CardListPokemons = ({
   pokemons: {
     pokemons: { results }
   }
@@ -13,7 +13,7 @@ const CardList = ({
     {results ? (
       <div className="card-list">
         {results.map((pokemon, index) => (
-          <Card key={index} name={pokemon.name} url={pokemon.url} />
+          <CardPokemons key={index} name={pokemon.name} url={pokemon.url} />
         ))}
       </div>
     ) : (
@@ -22,4 +22,4 @@ const CardList = ({
   </div>
 );
 
-export default CardList;
+export default CardListPokemons;

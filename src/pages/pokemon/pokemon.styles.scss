@@ -1,0 +1,14 @@
+$color-white: #ffffff;
+
+.pokemon-page {
+  grid-column: center-start / center-end;
+
+  &__title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: $color-white;
+    font-weight: bold;
+    text-align: center;
+    padding: 7rem;
+  }
+}

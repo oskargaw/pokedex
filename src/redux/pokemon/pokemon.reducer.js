@@ -1,7 +1,7 @@
 import PokemonActionTypes from "./pokemon.types";
 
 const INITIAL_STATE = {
-  pokemon: null,
+  pokemon: {},
   isPending: false,
   error: ""
 };

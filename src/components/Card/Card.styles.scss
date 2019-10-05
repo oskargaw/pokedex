@@ -7,7 +7,6 @@ $color-white: #ffffff;
   border-radius: 40px;
   box-shadow: 5px 5px 30px 7px rgba($color-black, 0.25),
     -5px -5px 30px 7px rgba($color-black, 0.22);
-  cursor: pointer;
   transition: 0.4s;
 
   display: flex;
@@ -27,6 +26,7 @@ $color-white: #ffffff;
   }
 
   &__text {
-    padding: 2px 16px;
+    font-size: 2rem;
+    color: $color-white;
   }
 }
