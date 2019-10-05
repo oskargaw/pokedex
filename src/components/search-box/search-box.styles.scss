@@ -1,0 +1,12 @@
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7rem;
+
+  &__input {
+    width: 65%;
+    font-size: 7rem;
+    padding: 3rem;
+    outline: none;
+  }
+}
